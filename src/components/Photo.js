@@ -7,7 +7,7 @@ class Photo extends React.Component {
   }
   render() {
     return (
-      <article className="photo-item">
+      <article id={this.props.id} className="photo-item">
         <img src={this.props.url} alt={this.props.title} />
       </article>
     );

@@ -18,6 +18,13 @@ body {
 	text-align: center;
 }
 
+.searchbox {
+	border: 1px solid #ddd;
+	padding: 1rem;
+	width: 200px;
+	border-radius: 7px;
+}
+
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen and (min-width: 1024px) {

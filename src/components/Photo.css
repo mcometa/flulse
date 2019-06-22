@@ -4,5 +4,16 @@ article.photo-item {
 }
 
 article.photo-item img {
-	width: 300px
+	width: 300px;
+	border-radius: 6px;
+}
+
+@media only screen and (max-width: 768px) {
+	article.photo-item {
+		flex: 1 0 90%;
+	}
+
+	article.photo-item img {
+		width: 100%;
+	}
 }
