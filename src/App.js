@@ -62,7 +62,7 @@ class App extends React.Component {
       fetch(
         `${process.env.REACT_APP_FLICKR_API_BASE}?method=${method}&api_key=${
           process.env.REACT_APP_FLICKR_API_KEY
-        }&per_page=6&page=1&tags=${
+        }&safe_search=1&per_page=6&page=1&tags=${
           e.target.value
         }&format=json&nojsoncallback=1&`
       )
