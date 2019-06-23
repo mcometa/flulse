@@ -2,16 +2,19 @@ import React from "react";
 import "./App.css";
 
 import Photo from "./components/Photo";
+import FilterBar from "./components/FilterBar";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       photos: [],
-      tag: ""
+      tag: "sibuyan island",
+      filterbar: false
     };
 
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleFilterClick = this.handleFilterClick.bind(this);
   }
 
   componentDidMount() {
@@ -96,25 +99,46 @@ class App extends React.Component {
         });
     }
   }
+  handleFilterClick = e => {
+    e.preventDefault();
+
+    console.log("filter click");
+
+    this.setState({
+      filterbar: !this.state.filterbar
+    });
+  };
 
   render() {
+    let filterbar = this.state.filterbar;
     return (
       <div className="App">
         <header className="App-header">
-          <h2 className="logoText"> Flulse </h2>{" "}
+          <h2 className="logoText">
+            {" "}
+            Flulse
+            <br />
+            <small>by mcometa</small>{" "}
+          </h2>{" "}
           <div className="toolbar-search">
             <input
               type="text"
+              defaultValue={this.state.tag}
               className="searchbox"
-              placeholder="Search keywords and press enter..."
+              placeholder="Search then press enter..."
               onKeyDown={e => this.handleSearch(e)}
             />{" "}
           </div>{" "}
-          <div className="toolbar-filter" />
+          <div className="toolbar-filter">
+            <a href="#" className="filter-btn" onClick={this.handleFilterClick}>
+              Filter
+            </a>
+          </div>
         </header>{" "}
+        <FilterBar show={this.state.filterbar} />
         <main className="Main-container">{this.state.photos} </main>
         <footer className="App-footer">
-          <p> by mcometa </p>{" "}
+          <p> hello 2019! </p>{" "}
         </footer>{" "}
       </div>
     );
