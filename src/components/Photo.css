@@ -1,6 +1,7 @@
 article.photo-item {
-	flex: 1 0 21%;
-	margin: 5px;
+	flex: 1 0 30%;
+	margin: 10px 5px;
+	text-align: center;
 }
 
 article.photo-item img {
