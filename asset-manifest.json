@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/flulse/static/css/main.4fa0622e.chunk.css",
-    "main.js": "/flulse/static/js/main.02b22929.chunk.js",
-    "main.js.map": "/flulse/static/js/main.02b22929.chunk.js.map",
+    "main.css": "/flulse/static/css/main.8388fb0b.chunk.css",
+    "main.js": "/flulse/static/js/main.51af0940.chunk.js",
+    "main.js.map": "/flulse/static/js/main.51af0940.chunk.js.map",
     "runtime~main.js": "/flulse/static/js/runtime~main.f9e4585d.js",
     "runtime~main.js.map": "/flulse/static/js/runtime~main.f9e4585d.js.map",
-    "static/js/2.2668f2aa.chunk.js": "/flulse/static/js/2.2668f2aa.chunk.js",
-    "static/js/2.2668f2aa.chunk.js.map": "/flulse/static/js/2.2668f2aa.chunk.js.map",
+    "static/js/2.001511c4.chunk.js": "/flulse/static/js/2.001511c4.chunk.js",
+    "static/js/2.001511c4.chunk.js.map": "/flulse/static/js/2.001511c4.chunk.js.map",
     "index.html": "/flulse/index.html",
-    "precache-manifest.1a6be1962de8134c94650aa2ac6a862e.js": "/flulse/precache-manifest.1a6be1962de8134c94650aa2ac6a862e.js",
+    "precache-manifest.ec10d77eb035ca24340dcdddde5ab0ec.js": "/flulse/precache-manifest.ec10d77eb035ca24340dcdddde5ab0ec.js",
     "service-worker.js": "/flulse/service-worker.js",
-    "static/css/main.4fa0622e.chunk.css.map": "/flulse/static/css/main.4fa0622e.chunk.css.map"
+    "static/css/main.8388fb0b.chunk.css.map": "/flulse/static/css/main.8388fb0b.chunk.css.map"
   }
 }
