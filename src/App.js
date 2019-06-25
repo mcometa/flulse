@@ -31,7 +31,7 @@ class App extends React.Component {
         // Do awesome stuff like loading more content!
         this.loadPhotos();
       }
-    }, 100);
+    }, 200);
   }
 
   componentDidMount() {
@@ -57,11 +57,6 @@ class App extends React.Component {
         return data.json();
       })
       .then(data => {
-        // https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
-        // or
-        // https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}_[mstzb].jpg
-        // or
-        // https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)
         let photosArray = data.photos.photo.map(photo => {
           let imgurl = `https://farm${photo.farm}.staticflickr.com/${
             photo.server
@@ -144,7 +139,7 @@ class App extends React.Component {
   render() {
     let filterbar = this.state.filterbar;
     return (
-      <div className="App">
+      <div data-testid="app-main" className="App">
         <header className="App-header">
           <h2 className="logoText">
             {" "}
@@ -158,6 +153,7 @@ class App extends React.Component {
               className="searchbox"
               placeholder="Search then press enter..."
               onKeyDown={e => this.handleSearch(e)}
+              data-testid="search-input"
             />{" "}
           </div>{" "}
           <div className="toolbar-filter">
@@ -167,7 +163,7 @@ class App extends React.Component {
           </div>{" "}
         </header>{" "}
         <FilterBar show={this.state.filterbar} />{" "}
-        <main className="Main-container">
+        <main data-testid="main-container" className="Main-container">
           {" "}
           {this.state.photos.length > 0 && this.state.photos}{" "}
         </main>{" "}
