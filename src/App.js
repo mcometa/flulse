@@ -83,13 +83,22 @@ class App extends React.Component {
   }
 
   handleSearch(e) {
-    let method = e.target.value
-      ? "flickr.photos.search"
-      : "flickr.photos.getRecent";
-
+    let method = () => {
+      if (e.target.value) {
+        this.setState({
+          tag: ""
+        });
+        return "flickr.photos.search";
+      } else {
+        this.setState({
+          tag: ""
+        });
+        return "flickr.photos.getRecent";
+      }
+    };
     if (e.keyCode === 13) {
       fetch(
-        `${process.env.REACT_APP_FLICKR_API_BASE}?method=${method}&api_key=${
+        `${process.env.REACT_APP_FLICKR_API_BASE}?method=${method()}&api_key=${
           process.env.REACT_APP_FLICKR_API_KEY
         }&safe_search=1&per_page=6&page=1&text=${
           e.target.value
@@ -156,11 +165,11 @@ class App extends React.Component {
               data-testid="search-input"
             />{" "}
           </div>{" "}
-          <div className="toolbar-filter">
+          {/* <div className="toolbar-filter">
             <a className="filter-btn" onClick={this.handleFilterClick}>
               Filter{" "}
             </a>{" "}
-          </div>{" "}
+          </div>{" "} */}
         </header>{" "}
         <FilterBar show={this.state.filterbar} />{" "}
         <main data-testid="main-container" className="Main-container">
