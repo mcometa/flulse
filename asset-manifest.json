@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/flulse/static/css/main.8388fb0b.chunk.css",
-    "main.js": "/flulse/static/js/main.51af0940.chunk.js",
-    "main.js.map": "/flulse/static/js/main.51af0940.chunk.js.map",
+    "main.js": "/flulse/static/js/main.ceb00a1b.chunk.js",
+    "main.js.map": "/flulse/static/js/main.ceb00a1b.chunk.js.map",
     "runtime~main.js": "/flulse/static/js/runtime~main.f9e4585d.js",
     "runtime~main.js.map": "/flulse/static/js/runtime~main.f9e4585d.js.map",
     "static/js/2.001511c4.chunk.js": "/flulse/static/js/2.001511c4.chunk.js",
     "static/js/2.001511c4.chunk.js.map": "/flulse/static/js/2.001511c4.chunk.js.map",
     "index.html": "/flulse/index.html",
-    "precache-manifest.ec10d77eb035ca24340dcdddde5ab0ec.js": "/flulse/precache-manifest.ec10d77eb035ca24340dcdddde5ab0ec.js",
+    "precache-manifest.3a5e137062aa468ecc140f5fff0f9445.js": "/flulse/precache-manifest.3a5e137062aa468ecc140f5fff0f9445.js",
     "service-worker.js": "/flulse/service-worker.js",
     "static/css/main.8388fb0b.chunk.css.map": "/flulse/static/css/main.8388fb0b.chunk.css.map"
   }

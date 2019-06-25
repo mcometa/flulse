@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21821d8962995ddf9cf1c1a308b215ad",
+    "revision": "79857005257a70bc7dada39f0af32170",
     "url": "/flulse/index.html"
   },
   {
-    "revision": "f899a2cec01026978d91",
+    "revision": "03eb5d356564b6ff21c3",
     "url": "/flulse/static/css/main.8388fb0b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flulse/static/js/2.001511c4.chunk.js"
   },
   {
-    "revision": "f899a2cec01026978d91",
-    "url": "/flulse/static/js/main.51af0940.chunk.js"
+    "revision": "03eb5d356564b6ff21c3",
+    "url": "/flulse/static/js/main.ceb00a1b.chunk.js"
   },
   {
     "revision": "5c50e9114bc266720b39",
