@@ -6,6 +6,10 @@ import { render, cleanup } from "@testing-library/react";
 
 afterEach(cleanup);
 
+// TODO:
+// 1) Pass the mock data to the Photo component
+// 2) When search is submitted, the display should output photos properly
+
 it("renders without crashing", () => {
   const { getByText, getByTestId, container, asFragment } = render(<App />);
 

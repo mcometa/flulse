@@ -5,6 +5,7 @@ import Photo from "./components/Photo";
 import FilterBar from "./components/FilterBar";
 
 import debounce from "lodash.debounce";
+import { throwStatement } from "@babel/types";
 
 class App extends React.Component {
   constructor() {
@@ -17,7 +18,8 @@ class App extends React.Component {
       error: false,
       hasMore: true,
       per_page: 6,
-      page: 1
+      page: 1,
+      loadMore: 0
     };
 
     this.handleSearch = this.handleSearch.bind(this);
@@ -57,27 +59,28 @@ class App extends React.Component {
         return data.json();
       })
       .then(data => {
-        let photosArray = data.photos.photo.map(photo => {
-          let imgurl = `https://farm${photo.farm}.staticflickr.com/${
-            photo.server
-          }/${photo.id}_${photo.secret}.jpg`;
+        // let photosArray = data.photos.photo.map(photo => {
+        //   let imgurl = `https://farm${photo.farm}.staticflickr.com/${
+        //     photo.server
+        //   }/${photo.id}_${photo.secret}.jpg`;
 
-          return (
-            <Photo
-              key={photo.id}
-              id={photo.id}
-              url={imgurl}
-              title={photo.title}
-            />
-          );
-        });
+        //   // return (
+        //   //   <Photo
+        //   //     key={photo.id}
+        //   //     id={photo.id}
+        //   //     url={imgurl}
+        //   //     title={photo.title}
+        //   //   />
+        //   // );
+        // });
 
         console.log(data.photos.photo.length);
 
         this.setState({
-          photos: [[...this.state.photos, ...photosArray]],
+          photos: [...this.state.photos, ...data.photos.photo],
           page: this.state.page + 1,
-          loading: false
+          loading: false,
+          loadMore: 1
         });
       });
   }
@@ -174,7 +177,21 @@ class App extends React.Component {
         <FilterBar show={this.state.filterbar} />{" "}
         <main data-testid="main-container" className="Main-container">
           {" "}
-          {this.state.photos.length > 0 && this.state.photos}{" "}
+          {console.log(this.state.photos)}
+          {this.state.photos.map(photo => {
+            let imgurl = `https://farm${photo.farm}.staticflickr.com/${
+              photo.server
+            }/${photo.id}_${photo.secret}.jpg`;
+
+            return (
+              <Photo
+                key={photo.id}
+                id={photo.id}
+                url={imgurl}
+                title={photo.title}
+              />
+            );
+          })}
         </main>{" "}
         {this.state.loading === true && (
           <div className="lds-ripple">
