@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Photo.css';
 
 const Photo = ({ id, url, title }) => (
-  <article id={id} className="photo-item">
+  <article data-testid="photo" id={id} className="photo-item">
     <img src={url} alt={title} />
   </article>
 );
