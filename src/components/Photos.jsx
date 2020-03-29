@@ -6,14 +6,9 @@ import Photo from './Photo';
 const Photos = ({ photos }) => {
   return (
     <main data-testid="photos" className="Main-container">
-      {' '}
       {photos.map((photo) => {
-        const {
-          urls: { thumb },
-          id,
-          alt_description: altDescriotion,
-        } = photo;
-        return <Photo key={id} id={id} url={thumb} title={altDescriotion} />;
+        const { urls, id, alt_description: altDescriotion } = photo;
+        return <Photo key={id} id={id} urls={urls} title={altDescriotion} />;
       })}
     </main>
   );

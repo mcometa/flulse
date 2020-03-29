@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+
+import { AppContext } from '../context/AppContext';
 
 const Search = () => {
-  const [tag, setTag] = useState('');
+  const { query, handleSearchKeyDown, handleSearchChange } = useContext(AppContext);
 
   return (
     <div className="toolbar-search">
       <input
         type="text"
-        defaultValue={tag}
+        defaultValue={query}
         className="searchbox"
         placeholder="Search then press enter..."
-        onChange={(e) => setTag(e.currentTarget.value)}
+        onKeyDown={(e) => handleSearchKeyDown(e)}
+        onChange={(e) => handleSearchChange(e)}
         data-testid="search-input"
       />
     </div>
