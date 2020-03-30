@@ -8,12 +8,16 @@ const Photo = ({ id, urls, title }) => (
   </article>
 );
 
+Photo.defaultProps = {
+  title: '',
+};
+
 Photo.propTypes = {
   id: PropTypes.string.isRequired,
   urls: PropTypes.shape({
     small: PropTypes.string.isRequired,
   }).isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 export default Photo;

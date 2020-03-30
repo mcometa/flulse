@@ -17,7 +17,11 @@ export const AppProvider = (props) => {
 
   const fetchPhotos = async () => {
     try {
-      const { data } = await API.get(`photos`);
+      const { data } = await API.get(`photos`, {
+        params: {
+          per_page: 9,
+        },
+      });
 
       setPhotos(data);
       setLoading(false);
@@ -60,12 +64,15 @@ export const AppProvider = (props) => {
 
   const handleSearchChange = (e) => setQuery(e.currentTarget.value);
 
+  const handleSearchReset = (e) => {
+    e.preventDefault();
+    fetchPhotos();
+    setQuery('');
+  };
+
   useEffect(() => {
-    // TODO: Find a smarter way to tell this app to fetch photos when query is reset or cleared.
-    if (!query) {
-      fetchPhotos();
-    }
-  }, [query]);
+    fetchPhotos();
+  }, []);
 
   return (
     <AppContext.Provider
@@ -75,6 +82,7 @@ export const AppProvider = (props) => {
         photos,
         handleSearchChange,
         handleSearchKeyDown,
+        handleSearchReset,
       }}
     >
       {children}

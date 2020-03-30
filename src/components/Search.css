@@ -1,0 +1,29 @@
+.toolbar-search {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.searchbox {
+	border: 1px solid #ddd;
+	padding: .5rem 1rem;
+	width: 200px;
+	border-radius: 7px;
+}
+
+input {
+	font-size: 14px;
+}
+
+.reset {
+  background: none;
+  border: 0;
+  position: absolute;
+  top: 9px;
+  right: 2px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  text-decoration: underline;
+}

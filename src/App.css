@@ -52,18 +52,6 @@ body {
 	text-align: center;
 }
 
-.searchbox {
-	border: 1px solid #ddd;
-	padding: .5rem 1rem;
-	width: 200px;
-	border-radius: 7px;
-}
-
-
-input {
-	font-size: 14px;
-}
-
 .toolbar-filter {
 	text-align: right;
 }

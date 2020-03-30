@@ -1,16 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const FilterBar = ({ show }) => {
-  if (show) {
-    return <div>Filter bar</div>;
-  }
+import './FilterBar.css';
 
-  return null;
-};
-
-FilterBar.propTypes = {
-  show: PropTypes.bool.isRequired,
+const FilterBar = () => {
+  return (
+    <div className="filterbar">
+      Filters:
+      <select className="select">
+        <option>Select orientation...</option>
+        <option value="landscape">Landscape</option>
+        <option value="portrait">Portrait</option>
+      </select>
+    </div>
+  );
 };
 
 export default FilterBar;
